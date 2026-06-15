@@ -25,7 +25,7 @@ if load_dotenv_r:
     from dotenv import load_dotenv
     load_dotenv()
 
-# --- PADRÃO EBAC: LOGS ESTRUTURADOS EM JSON ---
+# --- LOGS ESTRUTURADOS EM JSON ---
 class JSONFormatter(logging.Formatter):
     def format(self, record):
         log_object = {
@@ -52,7 +52,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 CACHE_LOCAL = {}
 CACHE_EXPIRATION_SECONDS = 300
 
-# --- PADRÃO EBAC: AUTENTICAÇÃO VIA HTTP BASIC ---
+# --- AUTENTICAÇÃO VIA HTTP BASIC ---
 MEU_USUARIO = os.getenv("MEU_USUARIO")
 MINHA_SENHA = os.getenv("MINHA_SENHA")
 
@@ -85,7 +85,7 @@ async def custom_http_exception_handler(request: Request, exc: HTTPException):
 # Cria as tabelas do SQLite automaticamente
 Base.metadata.create_all(bind=engine)
 
-# --- PADRÃO EBAC: GEREANCIADOR DE SESSÃO DO BANCO ---
+# --- GEREANCIADOR DE SESSÃO DO BANCO ---
 def sessao_db():
     db = SessionLocal()
     try:

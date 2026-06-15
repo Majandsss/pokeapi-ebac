@@ -23,7 +23,7 @@ Para garantir a máxima robustez e segurança da aplicação, foram implementado
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/SEU_USUARIO/pokeapi-ebac.git](https://github.com/SEU_USUARIO/pokeapi-ebac.git)
+   git clone [https://github.com/Majandsss/pokeapi-ebac.git](https://github.com/Majandsss/pokeapi-ebac.git)
    cd pokeapi-ebac
    ```
 
@@ -129,4 +129,5 @@ docker run -d -p 8080:8080 --env-file .env pokeapi-fastapi:latest
 ## 🚀 Link de Produção (API em Produção)
 
 A API está publicada e disponível para testes no ambiente de nuvem do Render:
-* **URL Oficial:** [INSIRA_O_LINK_DO_RENDER_AQUI]
+* **URL Oficial da API:** https://pokeapi-ebac.onrender.com
+* **Documentação Interativa (Swagger UI):** https://pokeapi-ebac.onrender.com/docs
