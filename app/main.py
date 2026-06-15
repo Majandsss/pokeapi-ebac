@@ -44,7 +44,7 @@ logger.addHandler(ch)
 
 # --- EXTRA: RATE LIMITING ---
 limiter = Limiter(key_func=get_remote_address)
-app = FastAPI(title="Sua PokéAPI Completa - EBAC")
+app = FastAPI(title="PokéAPI - EBAC")
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
