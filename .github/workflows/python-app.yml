@@ -28,6 +28,10 @@ jobs:
         run: poetry install --no-interaction --no-root
 
       - name: 🧪 Rodar testes
+        env:
+          DATABASE_URL: "sqlite:///:memory:"
+          MEU_USUARIO: admin
+          MINHA_SENHA: admin
         run: poetry run pytest -v
 
       - name: 🐳 Build da imagem Docker
